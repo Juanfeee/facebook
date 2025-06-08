@@ -10,44 +10,41 @@ const { title } = Astro.props;
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content="Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://juanfeee.github.io/facebook/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida." />
+    <meta property="og:image" content="https://elordenmundial.com/wp-content/uploads/2024/01/facebook-tecnologia-mundo.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida." />
+    <meta name="twitter:image" content="https://elordenmundial.com/wp-content/uploads/2024/01/facebook-tecnologia-mundo.png" />
+
+    <!-- Fonts and Scripts -->
     <script src="/placeholder.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.cdnfonts.com/css/helvetica-neue-5"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.cdnfonts.com/css/helvetica-neue-5" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ruda:wght@400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.cdnfonts.com/css/helvetica-neue-55"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Ruda:wght@400..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/helvetica-neue-55" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Facebook - Inicia sesión o regístrate" />
-    <meta
-      property="og:description"
-      content="Facebook te ayuda a comunicarte y compartir con las personas que forman parte de tu vida."
-    />
-    <meta
-      property="og:image"
-      content="https://elordenmundial.com/wp-content/uploads/2024/01/facebook-tecnologia-mundo.png"
-    />
-    <meta property="og:url" content="https://juanfeee.github.io/facebook/" />
-    <meta property="og:type" content="website" />
   </head>
+  
   <body>
     <slot />
   </body>
 </html>
+
 <style is:global>
   :root {
     --accent: 136, 58, 234;
